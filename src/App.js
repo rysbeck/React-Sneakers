@@ -1,40 +1,57 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/alt-text */
+import React from 'react';
 import './App.css';
 import Card from './components/Card'
 import Header from './components/Header'
 import Drawer from './components/Drawer'
 
-const arr = [ {title:'Men`s sneakers Nike Blazer Mid Suede', price: 12999,imageUrl:'./img/sneakers/1.jpg'},
-              {title:'Men`s sneakers Nike Air Max 270', price: 8999,imageUrl:'./img/sneakers/2.jpg'},
-              {title:'Men`s sneakers Nike Blazer Mid Suede', price: 9699,imageUrl:'./img/sneakers/3.jpg'},
-              {title:'Sneakers Puma X Aka Boku Future Rider', price: 8999,imageUrl:'./img/sneakers/4.jpg'},
-            ];
 function App() {
-  return(
-    <div className='wrapper clear'>
-      <Drawer/>
-       <Header/>
-      <div className='content p-40'>
-        <div className='d-flex align-center justify-between mb-40'>
-        <h1 className=''>All sneakers</h1>
-        <div className='search-block d-flex'>
-          <img  src='/img/search.png' alt='Search'/>
-          <input placeholder='Search...'></input>
+  const [items, setItems] = React.useState([]);
+  const [cartItems, setCartItems] = React.useState([]);
+  const [cartOpened, setCartOpened] = React.useState(false);
+
+  React.useEffect(() => {
+    fetch('https://6417516b0aec62588547c3ab.mockapi.io/items')
+      .then((res) => {
+        return res.json();
+      })
+      .then((json) => {
+        setItems(json);
+      });
+  }, []);
+
+  const onAddToCart = (obj) => {
+    setCartItems((prev) => [...prev, obj]);
+  };
+
+  return (
+    <div className="wrapper clear">
+      {cartOpened && <Drawer items={cartItems} onClose={() => setCartOpened(false)} />}
+      <Header onClickCart={() => setCartOpened(true)} />
+      <div className="content p-40">
+        <div className="d-flex align-center justify-between mb-40">
+          <h1>Все кроссовки</h1>
+          <div className="search-block d-flex">
+            <img src="/img/search.png" alt="Search" />
+            <input placeholder="Поиск..." />
+          </div>
         </div>
-        </div>
-        <div className='d-flex'>
-          {arr.map((obj)=>(
+
+        <div className="d-flex flex-wrap">
+          {items.map((item) => (
             <Card
-            title={obj.title}
-            price={obj.price}
-            imageUrl={obj.imageUrl}
-            onClick={()=>console.log(obj)}
-          />
+              title={item.title}
+              price={item.price}
+              imageUrl={item.imageUrl}
+              onFavorite={() => console.log('Добавили в закладки')}
+              onPlus={(obj) => onAddToCart(obj)}
+            />
           ))}
         </div>
       </div>
-      </div>
-  )
+    </div>
+  );
 }
 
 export default App;
