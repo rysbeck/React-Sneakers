@@ -48,7 +48,12 @@ To get started with the Sneakers Online Shop project, follow these steps:
 
 Contributions are welcome! If you find any issues or want to suggest enhancements, please submit a pull request or open an issue in the repository.
 
-## License
+## Contanct
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+[<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" width="16" height="16">](https://www.t.me/rysbeck)
+[<img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" width="16" height="16">](https://www.instagram.com/orozaliev.rsb/)
+[<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="16" height="16">](https://wa.me/+971586014711)
+[<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="16" height="16">](https://m.me/rysbeck)
+[<img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="16" height="16">](https://www.linkedin.com/in/rysbeck-orozaliev/)
+[<img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="LinkedIn" width="16" height="16">](mailto:rysbeck1@gmail.com)
 
