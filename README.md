@@ -48,7 +48,7 @@ To get started with the Sneakers Online Shop project, follow these steps:
 
 Contributions are welcome! If you find any issues or want to suggest enhancements, please submit a pull request or open an issue in the repository.
 
-## Contanct
+## Contact
 
 [<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" width="16" height="16">](https://www.t.me/rysbeck)
 [<img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" width="16" height="16">](https://www.instagram.com/orozaliev.rsb/)
